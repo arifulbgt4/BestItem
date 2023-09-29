@@ -21,8 +21,7 @@ import { HeaderProps } from "./Type";
 const drawerWidth = 240;
 const navItems = ["About", "Contact"];
 
-const Header: FC<HeaderProps> = (props) => {
-  const { window } = props;
+const Header: FC<HeaderProps> = () => {
   const [MobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -48,8 +47,7 @@ const Header: FC<HeaderProps> = (props) => {
       </List>
     </Box>
   );
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+
   return (
     <Box display="flex">
       <AppBar component="nav" position="relative">
@@ -83,7 +81,6 @@ const Header: FC<HeaderProps> = (props) => {
       </AppBar>
       <nav>
         <Drawer
-          container={container}
           variant="temporary"
           open={MobileOpen}
           onClose={handleDrawerToggle}
