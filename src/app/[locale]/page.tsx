@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import { useTranslations } from "next-intl";
 
 import ContentList from "src/widgets/ContentList";
-import HeroBanner from "src/widgets/HeroBanner/inedex";
+import HeroBanner from "src/widgets/HeroBanner";
 
 export default function Home() {
   // const t = useTranslations();
