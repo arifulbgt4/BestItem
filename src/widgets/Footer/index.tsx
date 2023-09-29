@@ -1,22 +1,20 @@
 import { FC } from "react";
 
 import { FooterProps } from "./Types";
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, Grid } from "@mui/material";
+import palette from "src/theme/palette";
+import ThemeContextProvider from "src/theme";
 
 const Footer: FC<FooterProps> = () => {
   return (
-    <Stack
-      direction={{ xs: "column", sm: "column", md: "row", lg: "row" }}
-      bgcolor="grey"
-      alignItems="center"
-      justifyContent="space-around"
-      p={2}
-      color="#b7aeae"
-    >
-      <Typography>@2023 www.product.com</Typography>
-      <Typography>About us</Typography>
-      <Typography>Support</Typography>
-    </Stack>
+    <Grid container bgcolor="#1A2027" p={2}>
+      <Grid item md={6} lg={6} xl={6} xs={12}>
+        <Typography textAlign="center">@2023 porduct page</Typography>
+      </Grid>
+      <Grid item md={6} lg={6} xl={6} xs={12}>
+        <Typography textAlign="center">Help</Typography>
+      </Grid>
+    </Grid>
   );
 };
 
