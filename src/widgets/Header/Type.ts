@@ -1,3 +1,1 @@
-export interface HeaderProps {
-  window?: () => Window;
-}
+export interface HeaderProps {}
