@@ -1,18 +1,16 @@
 import { FC } from "react";
+import { Typography, Grid } from "@mui/material";
 
 import { FooterProps } from "./Types";
-import { Stack, Typography, Grid } from "@mui/material";
-import palette from "src/theme/palette";
-import ThemeContextProvider from "src/theme";
 
 const Footer: FC<FooterProps> = () => {
   return (
-    <Grid container bgcolor="#1A2027" p={2}>
-      <Grid item md={6} lg={6} xl={6} xs={12}>
-        <Typography textAlign="center">@2023 porduct page</Typography>
+    <Grid container justifyContent="space-between" p={2}>
+      <Grid item>
+        <Typography>@2023 porduct page</Typography>
       </Grid>
-      <Grid item md={6} lg={6} xl={6} xs={12}>
-        <Typography textAlign="center">Help</Typography>
+      <Grid item>
+        <Typography>Help</Typography>
       </Grid>
     </Grid>
   );
