@@ -1,5 +1,7 @@
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
+
+import AppLayout from "src/layouts/AppLayout";
 import ThemeContextProvider from "src/theme";
 
 export const metadata = {
@@ -26,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <ThemeContextProvider>
-        <body suppressHydrationWarning={true}>{children}</body>
+        <body suppressHydrationWarning={true}>
+          <AppLayout>{children}</AppLayout>
+        </body>
       </ThemeContextProvider>
     </html>
   );
