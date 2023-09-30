@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Paper, Box, Typography } from "@mui/material";
+
 import { HeroBannerProps } from "./Types";
 
 const HeroBanner: FC<HeroBannerProps> = () => {
