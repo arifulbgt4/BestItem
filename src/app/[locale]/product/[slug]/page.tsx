@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 
 import ProductDeatailsBanner from "src/widgets/ProductDetailsBanner";
-import ProductDetailsCard from "src/widgets/ProductDetailsCard";
+import ContentDetailsCard from "src/widgets/ContentDetailsCard";
 
 const ProdutPage = () => {
   return (
@@ -10,7 +10,7 @@ const ProdutPage = () => {
         <ProductDeatailsBanner />
       </Grid>
       <Grid item xs={12}>
-        <ProductDetailsCard />
+        <ContentDetailsCard />
       </Grid>
     </Grid>
   );
