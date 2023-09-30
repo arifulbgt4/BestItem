@@ -8,9 +8,9 @@ import {
   Card,
 } from "@mui/material";
 
-import { ProductDetailsBannerProps } from "./Types";
+import { ContentDetailsBannerProps } from "./Types";
 
-const ProductDeatailsBanner: FC<ProductDetailsBannerProps> = () => {
+const ContentDeatailsBanner: FC<ContentDetailsBannerProps> = () => {
   return (
     <Container>
       <Card>
@@ -31,4 +31,4 @@ const ProductDeatailsBanner: FC<ProductDetailsBannerProps> = () => {
   );
 };
 
-export default ProductDeatailsBanner;
+export default ContentDeatailsBanner;
