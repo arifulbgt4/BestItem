@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import { useTranslations } from "next-intl";
 
-import ContentList from "src/widgets/ContentList";
+import ContentItem from "src/widgets/ContentItem";
 import HeroBanner from "src/widgets/HeroBanner/inedex";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         <HeroBanner />
       </Grid>
       <Grid item xs={12}>
-        <ContentList />
+        <ContentItem />
       </Grid>
     </Grid>
   );
