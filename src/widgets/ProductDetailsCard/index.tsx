@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { ProductDetailsCardProps } from "./Types";
 
 const ProductDetailsCard: FC<ProductDetailsCardProps> = () => {
