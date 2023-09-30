@@ -10,9 +10,9 @@ import {
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 
-import { ContentDetailsCardProps } from "./Types";
+import { ContentDetailsItemProps } from "./Types";
 
-const ContentDetailsCard: FC<ContentDetailsCardProps> = () => {
+const ContentDetailsItem: FC<ContentDetailsItemProps> = () => {
   return (
     <Card>
       <CardMedia
@@ -40,4 +40,4 @@ const ContentDetailsCard: FC<ContentDetailsCardProps> = () => {
   );
 };
 
-export default ContentDetailsCard;
+export default ContentDetailsItem;
