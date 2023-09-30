@@ -1,9 +1,19 @@
-import React, { FC } from "react";
+import { FC } from "react";
+import { Typography, Grid } from "@mui/material";
+
 import { FooterProps } from "./Types";
-import { Stack } from "@mui/material";
 
 const Footer: FC<FooterProps> = () => {
-  return <Stack></Stack>;
+  return (
+    <Grid container justifyContent="space-between" p={2}>
+      <Grid item>
+        <Typography>@2023 porduct page</Typography>
+      </Grid>
+      <Grid item>
+        <Typography>Help</Typography>
+      </Grid>
+    </Grid>
+  );
 };
 
 export default Footer;
