@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <Grid container>
       <Grid item xs={12}>
-        <HeroBanner />
+        <HeroBanner title="We Helps You" subtitle="Find Your Best Products" />
       </Grid>
       <Grid item xs={12}>
         <ContentItem />

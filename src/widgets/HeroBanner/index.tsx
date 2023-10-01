@@ -3,14 +3,14 @@ import { Box, Typography, Stack } from "@mui/material";
 
 import { HeroBannerProps } from "./Types";
 
-const HeroBanner: FC<HeroBannerProps> = () => {
+const HeroBanner: FC<HeroBannerProps> = ({ title, subtitle }) => {
   return (
     <Stack direction="column" alignItems="center">
       <Box>
-        <Typography variant="h3">We Helps You</Typography>
+        <Typography variant="h3">{title}</Typography>
       </Box>
       <Box>
-        <Typography variant="h4">Find Your Best Product</Typography>
+        <Typography variant="subtitle1">{subtitle}</Typography>
       </Box>
     </Stack>
   );
