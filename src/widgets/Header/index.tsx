@@ -61,15 +61,17 @@ const Header: FC<HeaderProps> = () => {
     <>
       <AppBar component="nav" position="relative">
         <Toolbar>
-          <IconButton
-            color="inherit"
-            onClick={handleDrawerToggle}
-            aria-label="open drawer"
-            edge="start"
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <Hidden smUp>
+            <IconButton
+              color="inherit"
+              onClick={handleDrawerToggle}
+              aria-label="open drawer"
+              edge="start"
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Hidden>
 
           <Hidden smDown>
             <Typography
@@ -82,21 +84,23 @@ const Header: FC<HeaderProps> = () => {
               Logo
             </Typography>
           </Hidden>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => {
-              return (
-                <Link px={2} key={item} href="#" underline="none">
-                  {item}
-                </Link>
-              );
-            })}
-          </Box>
-
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <Button>SIGN IN</Button>
-            <Button variant="contained">SUBSCRIBE</Button>
-          </Box>
+          <Hidden smDown>
+            <Box sx={{ flexGrow: 1 }}>
+              {navItems.map((item) => {
+                return (
+                  <Link px={2} key={item} href="#" underline="none">
+                    {item}
+                  </Link>
+                );
+              })}
+            </Box>
+          </Hidden>
+          <Hidden smDown>
+            <Box>
+              <Button>SIGN IN</Button>
+              <Button variant="contained">SUBSCRIBE</Button>
+            </Box>
+          </Hidden>
         </Toolbar>
       </AppBar>
 
