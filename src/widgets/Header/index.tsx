@@ -14,6 +14,8 @@ import {
   Toolbar,
   Typography,
   Button,
+  Stack,
+  Hidden,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -48,15 +50,15 @@ const Header: FC<HeaderProps> = () => {
       </List>
 
       <Divider />
-      <Box textAlign="center" display="flex" flexDirection="column" rowGap={1}>
+      <Stack textAlign="center" direction="column" rowGap={1}>
         <Button>SIGN IN</Button>
         <Button variant="contained">SUBSCRIBE</Button>
-      </Box>
+      </Stack>
     </Box>
   );
 
   return (
-    <Box display="flex">
+    <>
       <AppBar component="nav" position="relative">
         <Toolbar>
           <IconButton
@@ -69,16 +71,17 @@ const Header: FC<HeaderProps> = () => {
             <MenuIcon />
           </IconButton>
 
-          <Typography
-            variant="h5"
-            component={Link}
-            underline="none"
-            href="/"
-            pr={8}
-            display={{ xs: "none", sm: "block" }}
-          >
-            Logo
-          </Typography>
+          <Hidden smDown>
+            <Typography
+              variant="h5"
+              component={Link}
+              underline="none"
+              href="/"
+              pr={8}
+            >
+              Logo
+            </Typography>
+          </Hidden>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => {
@@ -96,26 +99,24 @@ const Header: FC<HeaderProps> = () => {
           </Box>
         </Toolbar>
       </AppBar>
-      <nav>
-        <Drawer
-          variant="temporary"
-          open={MobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true,
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-    </Box>
+
+      <Drawer
+        variant="temporary"
+        open={MobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true,
+        }}
+        sx={{
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: drawerWidth,
+          },
+        }}
+      >
+        {drawer}
+      </Drawer>
+    </>
   );
 };
 
