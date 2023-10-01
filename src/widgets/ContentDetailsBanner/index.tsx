@@ -1,12 +1,5 @@
 import { FC } from "react";
-import {
-  Box,
-  Container,
-  Stack,
-  Typography,
-  CardMedia,
-  Card,
-} from "@mui/material";
+import { Typography, CardMedia, Card } from "@mui/material";
 
 import { ContentDetailsBannerProps } from "./Types";
 
