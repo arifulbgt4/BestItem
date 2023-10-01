@@ -13,6 +13,7 @@ import {
   ListItemText,
   Toolbar,
   Typography,
+  Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -45,6 +46,11 @@ const Header: FC<HeaderProps> = () => {
           );
         })}
       </List>
+      <Divider />
+      <Box textAlign="center" display="flex" flexDirection="column" rowGap={1}>
+        <Button>SIGN IN</Button>
+        <Button variant="contained">SUBSCRIBE</Button>
+      </Box>
     </Box>
   );
 
@@ -61,14 +67,19 @@ const Header: FC<HeaderProps> = () => {
           >
             <MenuIcon />
           </IconButton>
+
           <Typography
             variant="h5"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            component={Link}
+            underline="none"
+            href="/"
+            pr={8}
+            display={{ xs: "none", sm: "block" }}
           >
             Logo
           </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => {
               return (
                 <Link px={2} key={item} href="#" underline="none">
@@ -76,6 +87,10 @@ const Header: FC<HeaderProps> = () => {
                 </Link>
               );
             })}
+          </Box>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Button>SIGN IN</Button>
+            <Button variant="contained">SUBSCRIBE</Button>
           </Box>
         </Toolbar>
       </AppBar>
